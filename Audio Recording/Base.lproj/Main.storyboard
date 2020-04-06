@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Audio_Recording" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPP-Qz-REX">
+                                <rect key="frame" x="16" y="798" width="382" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0hY-dG-F9E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCM-PU-3IA">
+                                <rect key="frame" x="16" y="602" width="382" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Play Recording"/>
+                                <connections>
+                                    <action selector="playButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tpy-hd-cNL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQz-14-8jV">
+                                <rect key="frame" x="16" y="700" width="382" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cGW-Fb-ADU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on &quot;Record&quot; button to start recording" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIr-EN-j5i">
+                                <rect key="frame" x="16" y="256.5" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JIr-EN-j5i" firstAttribute="leading" secondItem="lCM-PU-3IA" secondAttribute="leading" id="HQS-MX-616"/>
+                            <constraint firstItem="vQz-14-8jV" firstAttribute="trailing" secondItem="bPP-Qz-REX" secondAttribute="trailing" id="JrV-lc-yxY"/>
+                            <constraint firstItem="vQz-14-8jV" firstAttribute="leading" secondItem="bPP-Qz-REX" secondAttribute="leading" id="LGY-cm-s4p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bPP-Qz-REX" secondAttribute="trailing" constant="16" id="ViI-p7-Yah"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bPP-Qz-REX" secondAttribute="bottom" constant="16" id="XCu-aP-7pM"/>
+                            <constraint firstItem="bPP-Qz-REX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="c59-cQ-B5n"/>
+                            <constraint firstItem="lCM-PU-3IA" firstAttribute="top" secondItem="JIr-EN-j5i" secondAttribute="bottom" constant="325" id="eOt-Aj-Dgc"/>
+                            <constraint firstItem="lCM-PU-3IA" firstAttribute="leading" secondItem="bPP-Qz-REX" secondAttribute="leading" id="jSe-2s-O8T"/>
+                            <constraint firstItem="bPP-Qz-REX" firstAttribute="top" secondItem="vQz-14-8jV" secondAttribute="bottom" constant="50" id="mw3-72-yFo"/>
+                            <constraint firstItem="vQz-14-8jV" firstAttribute="top" secondItem="lCM-PU-3IA" secondAttribute="bottom" constant="50" id="qDb-Nb-mYq"/>
+                            <constraint firstItem="JIr-EN-j5i" firstAttribute="trailing" secondItem="lCM-PU-3IA" secondAttribute="trailing" id="vMH-cp-LnT"/>
+                            <constraint firstItem="lCM-PU-3IA" firstAttribute="trailing" secondItem="bPP-Qz-REX" secondAttribute="trailing" id="yRL-aD-1gY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="JIr-EN-j5i" id="jy9-cb-JkJ"/>
+                        <outlet property="recordButton" destination="bPP-Qz-REX" id="GmA-rW-hrL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="116"/>
+        </scene>
+    </scenes>
+</document>
